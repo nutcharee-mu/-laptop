@@ -3,3 +3,5 @@ pandas
 numpy
 transformers
 torch
+accelerate
+bitsandbytes
