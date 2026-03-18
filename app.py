@@ -7,13 +7,13 @@ import re
 
 # --- ส่วนการตั้งค่าหน้าเว็บ ---
 st.set_page_config(page_title="AI Gus - Laptop Advisor", layout="wide")
-st.title("💻 เอไอกัส: ระบบแนะนำโน้ตบุ๊กอัจฉริยะ")
+st.title("💻 AI: ระบบแนะนำโน้ตบุ๊กอัจฉริยะ")
 
 # --- 1. โหลดข้อมูลและโมเดล (ใช้ Cache เพื่อความเร็ว) ---
 @st.cache_resource
 def load_all():
     # โหลด Dataset (เปลี่ยนชื่อไฟล์ให้ตรงกับของคุณ)
-    df = pd.read_csv('laptops.csv') 
+    df = pd.read_csv('laptop_price.csv') 
     
     # ตั้งค่า AI Model (อ้างอิงจากไฟล์ เอไอกัส.ipynb)
     model_id = "Qwen/Qwen2.5-3B-Instruct"
