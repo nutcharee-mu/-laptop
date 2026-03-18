@@ -6,7 +6,7 @@ st.set_page_config(page_title="AI Laptop Recommender", layout="wide")
 # โหลด data
 @st.cache_data
 def load_data():
-    df = pd.read_csv("laptop_price.csv")
+    df = pd.read_csv("laptop_price.csv", encoding="latin-1")
     return df
 
 df = load_data()
